@@ -46,3 +46,63 @@ dam-java-learning/
 ├── 11-ficheros/
 │
 └── proyectos/
+```
+
+---
+
+## Organización
+
+Los ejercicios se agrupan por conceptos para mantener una progresión clara del aprendizaje.
+
+Los ejercicios sencillos pueden contener una única clase, mientras que las prácticas más avanzadas incorporarán progresivamente varias clases, paquetes y estructuras más completas.
+
+### Ejemplo
+
+```text
+06-poo/
+│
+├── 01-clases-y-objetos/
+│
+├── 02-encapsulacion/
+│
+└── 03-gestion-biblioteca/
+    ├── Main.java
+    ├── Libro.java
+    ├── Usuario.java
+    └── Biblioteca.java
+```
+
+---
+
+## Entorno de desarrollo
+
+- **Lenguaje:** Java
+- **IDE:** Apache NetBeans
+- **Control de versiones:** Git
+- **Repositorio remoto:** GitHub
+
+---
+
+## Estado
+
+🟢 **En desarrollo**
+
+Este repositorio se actualiza a medida que avanzo en mi formación y realizo nuevos ejercicios, prácticas y proyectos.
+
+---
+
+## Nota
+
+Este repositorio tiene una **finalidad educativa**.
+
+El código refleja diferentes etapas de mi aprendizaje. Los primeros ejercicios pueden utilizar soluciones sencillas que evolucionarán progresivamente hacia estructuras más organizadas, programación orientada a objetos y proyectos de mayor complejidad.
+
+---
+
+## Autor
+
+**Sergio Alcántara**
+
+Estudiante de **Desarrollo de Aplicaciones Multiplataforma (DAM)**.
+
+[GitHub](https://github.com/seralcesc)
