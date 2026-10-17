@@ -1,0 +1,40 @@
+// 1. ESTRUCTURA MIENTRAS (WHILE)
+PROGRAMA MultiplosDeCinco
+INICIO
+    DATOS
+        Variables: i, multiplo : entero
+    ALGORITMO
+        i = 0
+        Mientras i <= 20 Hacer
+            multiplo = i * 5
+            Escribir multiplo
+            i = i + 1
+        FinMientras
+FIN
+
+// 2. ESTRUCTURA REPETIR (DO-WHILE)
+PROGRAMA MultiplosDeCinco
+INICIO
+    DATOS
+        Variables: i, multiplo : entero
+    ALGORITMO
+        i = 0
+        Repetir
+            multiplo = i * 5
+            Escribir multiplo
+            i = i + 1
+        Hasta Que i > 20   // O también: Hasta Que multiplo == 100
+FIN
+
+// 3. ESTRUCTURA PARA (FOR)
+PROGRAMA MultiplosDeCinco
+INICIO
+    DATOS
+        Variables: i, multiplo : entero
+    ALGORITMO
+        Para i <- 0 Hasta 20 Hacer
+            multiplo = i * 5
+            Escribir multiplo
+            // ¡Sin i = i + 1 aquí dentro! El 'Para' lo hace solo.
+        FinPara
+FIN

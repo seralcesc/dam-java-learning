@@ -1,0 +1,26 @@
+PROGRAMA ControlAccesoCajaFuerte
+INICIO:
+    DATOS
+        Variables:
+            intentos, contrasena, CLAVE : entero
+            acertado : logico
+
+    ALGORITMO:
+        CLAVE = 1234
+        intentos = 4
+        acertado = Falso
+
+        Repetir
+            Escribir "Introduce la combinación de 4 cifras:"
+            Leer contrasena
+
+            Si contrasena == CLAVE Entonces
+                Escribir "La caja fuerte se ha abierto satisfactoriamente"
+                acertado = Verdadero
+            Sino
+                Escribir "Lo siento, esa no es la combinación"
+                intentos = intentos - 1
+            FinSi
+
+        Hasta Que acertado == Verdadero O intentos == 0
+FIN

@@ -1,0 +1,35 @@
+PROGRAMA Hasta10000
+INICIO:
+    DATOS:
+        Variables:
+            num, suma, i, restante : enteros
+            media : real
+
+    ALGORITMO:
+        suma = 0
+        i = 0
+        restante = 10000
+
+        Mientras suma <= 10000 Hacer
+            Escribir "Te quedan ", restante, " para alcanzar 10000."
+            Escribir "Introduce un número (máximo 10000):"
+            Leer num
+
+            // Validamos que el número introducido no supere el máximo permitido por el profesor
+            Si num > 10000 O num < 0 Entonces
+                Escribir "Error: El número debe estar entre 0 y 10000."
+            Sino
+                suma = suma + num
+                i = i + 1
+                restante = 10000 - suma
+            FinSi
+        FinMientras
+
+        // Salida de resultados
+        Escribir "--- RESULTADOS FINALES ---"
+        Escribir "Total acumulado: ", suma
+        Escribir "Cantidad de números introducidos: ", i
+        
+        media = suma / i
+        Escribir "La media es: ", media
+FIN

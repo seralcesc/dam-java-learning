@@ -1,0 +1,38 @@
+// 1. ESTRUCTURA REPETIR (DO-WHILE)
+PROGRAMA Restar20
+INICIO
+    DATOS
+        Variables: total, i : entero
+    ALGORITMO
+        total = 320
+        i = 20
+        Repetir
+            Escribir total
+            total = total - i
+        Hasta Que total < 160   // Se detiene al bajar de 160
+FIN
+
+// 2. ESTRUCTURA MIENTRAS (WHILE)
+PROGRAMA Restar20
+INICIO
+    DATOS
+        Variables: total, i : entero
+    ALGORITMO
+        total = 320
+        i = 20
+        Mientras total >= 160 Hacer   // O también: Mientras total > 140
+            Escribir total
+            total = total - i
+        FinMientras
+FIN
+
+// 3. ESTRUCTURA PARA (FOR)
+PROGRAMA Restar20
+INICIO
+    DATOS
+        Variables: total : entero
+    ALGORITMO
+        Para total <- 320 Hasta 160 Con Paso -20 Hacer
+            Escribir total
+        FinPara
+FIN

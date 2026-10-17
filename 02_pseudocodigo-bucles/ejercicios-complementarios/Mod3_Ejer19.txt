@@ -1,0 +1,31 @@
+PROGRAMA CalcularMedia
+INICIO:
+    DATOS:
+        Variables:
+            i : entero
+            suma, media, num : reales
+
+    ALGORITMO:
+        suma = 0
+        i = 0
+
+        Escribir "Introduce un número (negativo para terminar):"
+        Leer num
+
+        Mientras num >= 0 Hacer
+            suma = suma + num
+            i = i + 1
+
+            Escribir "Introduce otro número (negativo para terminar):"
+            Leer num    // Actualización de la variable dentro del bucle
+        FinMientras
+
+        Si i == 0 Entonces
+            Escribir "No se han introducido números válidos para calcular la media."
+        Sino
+            media = suma / i
+            Escribir "La media de los números introducidos es: ", media
+        FinSi
+
+        Escribir "Fin del programa."
+FIN

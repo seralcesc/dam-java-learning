@@ -1,0 +1,16 @@
+PROGRAMA TablaMultiplicar
+INICIO:
+    DATOS
+        Variables: num, i, resultado : entero
+
+    ALGORITMO:
+        Escribir "Introduce un número:"
+        Leer num
+        i = 1
+
+        Mientras i <= 10 Hacer
+            resultado = num * i
+            Escribir num, " x ", i, " = ", resultado
+            i = i + 1
+        Fin Mientras
+FIN

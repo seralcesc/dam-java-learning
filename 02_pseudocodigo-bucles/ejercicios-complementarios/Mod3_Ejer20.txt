@@ -1,0 +1,58 @@
+PROGRAMA PrimosGemelos
+INICIO:
+    DATOS:
+        Variables:
+            num1, num2, i, j : entero
+            esPrimo1, esPrimo2 : logico
+
+    ALGORITMO:
+        Escribir "Introduce el primer número:"
+        Leer num1
+        Escribir "Introduce el segundo número:"
+        Leer num2
+
+        // Validación de números mayores que 1
+        Si num1 <= 1 O num2 <= 1 Entonces
+            Escribir "Ambos números deben ser enteros mayores que 1."
+        Sino
+            // 1. Evaluación de Primo para num1
+            esPrimo1 = Verdadero
+            i = 2
+            Mientras i * i <= num1 Y esPrimo1 == Verdadero Hacer
+                Si num1 % i == 0 Entonces
+                    esPrimo1 = Falso
+                FinSi
+                i = i + 1  // El incremento se ejecuta SIEMPRE
+            FinMientras
+
+            // 2. Evaluación de Primo para num2
+            esPrimo2 = Verdadero
+            j = 2
+            Mientras j * j <= num2 Y esPrimo2 == Verdadero Hacer
+                Si num2 % j == 0 Entonces
+                    esPrimo2 = Falso
+                FinSi
+                j = j + 1  // El incremento se ejecuta SIEMPRE
+            FinMientras
+
+            // 3. Informar estado individual de cada número
+            Si esPrimo1 == Verdadero Entonces
+                Escribir num1, " es primo."
+            Sino
+                Escribir num1, " NO es primo."
+            FinSi
+
+            Si esPrimo2 == Verdadero Entonces
+                Escribir num2, " es primo."
+            Sino
+                Escribir num2, " NO es primo."
+            FinSi
+
+            // 4. Verificación final de Primos Gemelos
+            Si esPrimo1 == Verdadero Y esPrimo2 == Verdadero Y (num1 - num2 == 2 O num2 - num1 == 2) Entonces
+                Escribir num1, " y ", num2, " SON PRIMOS GEMELOS."
+            Sino
+                Escribir num1, " y ", num2, " NO son primos gemelos."
+            FinSi
+        FinSi
+FIN
