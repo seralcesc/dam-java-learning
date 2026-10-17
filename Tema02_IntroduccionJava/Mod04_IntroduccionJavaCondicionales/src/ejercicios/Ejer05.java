@@ -46,8 +46,19 @@ public class Ejer05 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
+        double radio, longitud, area, volumen;
 
+        System.out.println("Introduce el valor del radio: ");
+        radio = sc.nextDouble();
+
+        longitud = 2*Math.PI*radio;
+        area = Math.PI*Math.pow(radio, 2);
+        volumen = 4.0/3*Math.PI*Math.pow(radio, 3);
+
+        System.out.println("\n######### RESULTADOS #########\n");
+        System.out.println("Longitud de la circunferencia: " + longitud);
+        System.out.println("Área del círculo: " + area);
+        System.out.println("Volumen de la esfera: " + volumen);
 
     } // main
 
