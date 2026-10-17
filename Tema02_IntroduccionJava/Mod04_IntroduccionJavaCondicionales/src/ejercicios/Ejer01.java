@@ -31,20 +31,21 @@ package ejercicios;
 /**
  * ========== PROGRAMACIÓN / JAVA ==========
  *
- * MÓDULO: [X]
- * RELACIÓN: [X]
- * EJERCICIO: [XX]
+ * MÓDULO: [04]
+ * EJERCICIO: [01]
  *
  * ENUNCIADO:
- * [Escribir aquí el enunciado del ejercicio]
+ * Escribe un programa que dé los “buenos días” .
  *
- * AUTOR: Sergio Alcántara Escudero
+ * AUTOR:
+ * Sergio Alcántara Escudero
  * =========================================
  */
 
 public class Ejer01 {
 
     public static void main(String[] args) {
+        System.out.println("Buenos días");
 
     } // main
 
