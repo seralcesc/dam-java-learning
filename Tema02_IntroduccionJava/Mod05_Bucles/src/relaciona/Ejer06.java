@@ -1,0 +1,114 @@
+package relaciona;
+
+import java.util.Scanner;
+
+// <editor-fold defaultstate="collapsed" desc="RECORDATORIOS NETBEANS / JAVA">
+
+/*
+ * ========== RECORDATORIOS NETBEANS / JAVA ==========
+ *
+ * EDICIÓN:
+ * --------
+ * Home + Shift + End : Seleccionar línea completa
+ * Alt + Shift + Flecha : Desplazar línea seleccionada
+ * Ctrl + E           : Eliminar línea actual
+ * Ctrl + 7           : Comentar o descomentar (Tambiém Ctrl + Shift + C)
+ * Alt + Shift + F    : Formatear y aplicar sangría
+ *
+ * AYUDAS:
+ * -------
+ * Ctrl + Shift + I   : Corregir y añadir imports
+ * Alt + Shift + I    : Importar clase seleccionada
+ * Ctrl + Espacio     : Autocompletado
+ * Alt + Insert       : Generar código
+ * Shift + F6         : Ejecutar archivo actual
+ * scanner + Esc + Tab: Crear Scanner sc con import automático
+ *
+ * STRING.FORMAT:
+ * --------------
+ * println()        | System.out.println("Texto" + variable);       |    Mostrar texto y valores
+ * printf()         | System.out.printf("Texto %.2f%n", variable);  |    Mostrar texto con formato
+ * String.format()	| String.format("Texto %.2f", variable);        |    Crear un String formateado
+ *
+ * %d       entero
+ * %f       decimal (6 decimales por defecto)
+ * %.1f     decimal (con 1 decimal)
+ * %.2f     decimal (con 2 decimales)
+ * %.03d    Mínimo 3 posiciones, rellenando con ceros	(005)
+ * %s       cadena de texto
+ * %c       char
+ * %n       salto de linea (printf no lo hace por defecto)
+ * \t       tabulación
+ * \n       Salto de línea (print o println)
+ * \'       Mostrar comilla simple '
+ * %%       muestra el símbolo %
+ * \"       \"Teclado\" => "Teclado"
+ *
+ * ARRAYS:
+ * -------
+ * java.util.Arrays
+ *
+ * ELIMINAR ESTE BLOQUE ANTES DE ENTREGAR.
+ * ====================================================
+ */
+// </editor-fold>
+/**
+ * ========== PROGRAMACIÓN / JAVA ==========
+ *
+ * MÓDULO: [5]
+ * RELACIÓN: [A]
+ * EJERCICIO: [06]
+ *
+ * ENUNCIADO:
+ * Realiza un programa que lea 10 números no nulos y luego muestre un mensaje de si ha leído
+ * algún número negativo o no.
+ *
+ *
+ * AUTOR: Sergio Alcántara Escudero
+ * =========================================
+ */
+public class Ejer06 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        //declaración de variables
+        int i, num;
+        boolean nulo;
+
+        //incialización de variables
+        nulo = false;
+        i = 0;
+
+        do {
+            i++;
+            System.out.println(String.format("Introduce un número (%02d/10): ", i));
+            num = sc.nextInt();
+
+            if (num == 0) {
+                nulo = true;
+            } // if
+        } while (i<10); // do-while
+
+        if (nulo) {
+            System.out.println("Has introducido un número nulo.");
+        } else {
+            System.out.println("No has introducido un número nulo.");
+        } // if
+
+//        for (int j = 1; j <= 10; j++) {
+//            System.out.println(String.format("Introduce un número (%d/10): ", j));
+//            num = sc.nextInt();
+//
+//            if (num == 0) {
+//                nulo = true;
+//            } // if
+//        } // for
+//        if (nulo) {
+//            System.out.println("Has introducido un número nulo.");
+//        } else {
+//            System.out.println("No has introducido un número nulo.");
+//        } // if
+    } // main
+
+} // class
