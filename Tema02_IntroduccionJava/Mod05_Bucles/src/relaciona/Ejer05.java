@@ -1,7 +1,6 @@
 package relaciona;
 
 // <editor-fold defaultstate="collapsed" desc="RECORDATORIOS NETBEANS / JAVA">
-
 import java.util.Scanner;
 
 /*
@@ -82,11 +81,15 @@ public class Ejer05 {
         System.out.println("Introduce un número: ");
         num = sc.nextInt();
 
-        for (int i = 1; i <= num; i++) {
-            factorial = factorial * i;
-        }
+        if (num < 0) {
+            System.out.println("Error: el factorial no está definido para números negativos.");
+        } else {
+            for (int i = 1; i <= num; i++) {
+                factorial *= i;
+            }
 
-        System.out.printf("El factorial de %d es: %d.%n", num, factorial);
+            System.out.printf("El factorial de %d es: %d%n", num, factorial);
+        }
 
     } // main
 

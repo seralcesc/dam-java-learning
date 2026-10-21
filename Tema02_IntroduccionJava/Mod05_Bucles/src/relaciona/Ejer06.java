@@ -74,10 +74,10 @@ public class Ejer06 {
 
         //declaración de variables
         int i, num;
-        boolean nulo;
+        boolean negativo;
 
         //incialización de variables
-        nulo = false;
+        negativo = false;
         i = 0;
 
         do {
@@ -86,28 +86,31 @@ public class Ejer06 {
             num = sc.nextInt();
 
             if (num == 0) {
-                nulo = true;
+                negativo = true;
             } // if
         } while (i<10); // do-while
 
-        if (nulo) {
+        if (negativo) {
             System.out.println("Has introducido un número nulo.");
         } else {
             System.out.println("No has introducido un número nulo.");
         } // if
 
-//        for (int j = 1; j <= 10; j++) {
+//        for (int j = 1; j <= 10;) {
 //            System.out.println(String.format("Introduce un número (%d/10): ", j));
 //            num = sc.nextInt();
 //
-//            if (num == 0) {
-//                nulo = true;
+//            if (num != 0) {
+//                j++;
+//                if (num < 0) {
+//                    negativo = true;
+//                } // if
 //            } // if
 //        } // for
-//        if (nulo) {
-//            System.out.println("Has introducido un número nulo.");
+//        if (negativo) {
+//            System.out.println("Has introducido un número negativo.");
 //        } else {
-//            System.out.println("No has introducido un número nulo.");
+//            System.out.println("No has introducido un número negativo.");
 //        } // if
     } // main
 
