@@ -15,7 +15,7 @@ public class EjemploAleatorio {
      */
     public static void main(String[] args) {
         int azaroso;
-        
+
         //Instrucciones
         System.out.println("ACLARACIONES:");
         System.out.println("Los números aleatorios se generan con el método "
@@ -24,23 +24,23 @@ public class EjemploAleatorio {
         System.out.println("Se genera un double entre 0 y 1.");
         System.out.println("A partir de este método, construimos diferentes aplicaciones");
         System.out.println("");
-        
+
         //Un número aleatorio
         System.out.println("Genero un número aleatorio: "+Math.random());
         System.out.println("");
-        
+
         //Diez números aleatorios
         System.out.println("Genero 10 números aleatorios con un bucle for:");
         for (int i = 0; i < 10; i++) {
             System.out.println("Número = "+Math.random());
         }
         System.out.println("");
-        
+
         //Un número entero aleatorio entre 0 y 10
         azaroso=(int)(Math.random()*10);
         System.out.println("Entero aleatorio entre 0 y 10 = "+azaroso);
         System.out.println("");
-        
+
         //Ejemplo de Luis J. Sánchez
         System.out.println("Genera al azar piedra, papel o tijera:");
         int mano = (int)(Math.random()*3); // genera un número al azar
@@ -58,5 +58,4 @@ public class EjemploAleatorio {
             default:
         }
     }
-    
 }
