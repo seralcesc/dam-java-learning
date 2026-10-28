@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package excepciones01;
+package apuntes;
 
 
 /*
@@ -14,7 +14,7 @@ package excepciones01;
 /*
 Aunque la división por 0 se puede tratar con una excepción, también se puede
 evitar con un condicional, impidiendo que la operación se realice si el divisor
-es 0. 
+es 0.
 */
 /**
  *
@@ -27,14 +27,14 @@ public class Excepciones01 {
      */
     public static void main(String[] args) {
         int div, x, y;
-        
+
         x=3;
         y=0;
-        
+
         try{
             System.out.println("x = " + x);
             System.out.println("y = " + y);
-            div=x/y;       
+            div=x/y;
             System.out.println("div = " + div);
         }
         catch(ArithmeticException ex){
@@ -46,5 +46,5 @@ public class Excepciones01 {
                     + "porque está incluida dentro de finally");
         }
     }
-    
+
 }

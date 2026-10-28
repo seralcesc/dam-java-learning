@@ -1,3 +1,5 @@
+package apuntes;
+
 /**
  * RECORDATORIO - CLASE STRING Y TRATAMIENTO DE CARACTERES
  * Ejemplos independientes para consultar durante los ejercicios.

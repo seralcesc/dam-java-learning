@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package excepciones02;
+package apuntes;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
@@ -13,7 +13,7 @@ import java.util.InputMismatchException;
 */
 
 /*-------------------------------------------------------------------------
-En este caso, estamos tratando un error en tiempo de ejecución, ya que no 
+En este caso, estamos tratando un error en tiempo de ejecución, ya que no
 sabemos lo que el usuario va a introducir por consola. Debemos garantizar
 que nos facilita el tipo de datos correcto y evitar que se rompa el programa
 */
@@ -35,7 +35,7 @@ public class Excepciones02 {
         do {
             repetir = false;
             try {
-                System.out.print("Introduce primer número entero: ");                                             
+                System.out.print("Introduce primer número entero: ");
                 x = sc.nextInt();
 
                 System.out.print("Introduce segundo número entero: ");
@@ -47,7 +47,7 @@ public class Excepciones02 {
                 System.out.print("Introduce un número con decimales: ");
                 decimal = sc.nextDouble();
             } catch (InputMismatchException e) {
-                System.err.println("Valor no válido, tipo de excepción " + e.toString());                                             
+                System.err.println("Valor no válido, tipo de excepción " + e.toString());
                 sc.nextLine();
                 repetir = true;
             }
@@ -57,5 +57,5 @@ public class Excepciones02 {
         System.out.println("Valor 3 introducido -> " + z);
         System.out.println("Decimal introducido -> " + decimal);
     }//main
-    
+
 }//class
