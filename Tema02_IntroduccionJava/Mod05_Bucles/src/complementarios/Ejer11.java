@@ -73,6 +73,29 @@ public class Ejer11 {
 
     public static void main(String[] args) {
 
+        String texto, vocales;
+        int contador;
+
+        contador = 0;
+
+        texto = "Porta fames dis aenean platea neque semper? Conubia eleifend commodo maecenas risus"
+                + " risus pellentesque. Eros iaculis duis posuere integer purus euismod consequat."
+                + "Vel congue curabitur penatibus ac mus nisi iaculis; scelerisque feugiat blandit "
+                + "molestie euismod. Tincidunt risus sociis nostra fermentum laoreet aliquet aptent "
+                + "est. Platea non proin aliquet scelerisque nam maecenas elit cum.";
+
+        vocales = "aeiouáéíóú";
+
+        texto = texto.toLowerCase();
+
+        for (int i = 0; i < texto.length(); i++) {
+            if (vocales.indexOf(texto.charAt(i)) != -1) {
+                contador += 1;
+            }
+        }
+
+        System.out.println("Cantidad de vocales: " + contador);
+
     } // main
 
 } // class

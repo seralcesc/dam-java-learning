@@ -69,6 +69,17 @@ public class Ejer12 {
 
     public static void main(String[] args) {
 
+        int i=
+        i = 0;
+
+        while (i <= 25) {
+            i++;
+            System.out.print(i*11 + " ");
+            if (i % 10 == 0) {
+                System.out.println();
+            }
+        }
+
     } // main
 
 } // class

@@ -1,5 +1,7 @@
 package complementarios;
 
+import java.util.Scanner;
+
 // <editor-fold defaultstate="collapsed" desc="RECORDATORIOS NETBEANS / JAVA">
 /*
  * ========== RECORDATORIOS NETBEANS / JAVA ==========
@@ -68,6 +70,24 @@ package complementarios;
 public class Ejer10 {
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String texto, invertida;
+
+        invertida = "";
+
+        System.out.println("Escribe una palabra para saber si es palíndroma:");
+        texto = sc.next();
+
+        for (int i = texto.length() - 1; i >= 0; i--) {
+            invertida += texto.charAt(i);
+        }
+
+        if (texto.toLowerCase().equals(invertida.toLowerCase())) {
+            System.out.printf("La palabra %s, es un palíndromo.%n", texto);
+        } else {
+            System.out.printf("La palabra %s, no es un palíndromo.%n", texto);
+
+        }
 
     } // main
 
