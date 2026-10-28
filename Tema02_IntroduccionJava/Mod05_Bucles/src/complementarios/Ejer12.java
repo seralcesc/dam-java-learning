@@ -72,7 +72,7 @@ public class Ejer12 {
         int i=
         i = 0;
 
-        while (i <= 25) {
+        while (i < 25) {
             i++;
             System.out.print(i*11 + " ");
             if (i % 10 == 0) {
