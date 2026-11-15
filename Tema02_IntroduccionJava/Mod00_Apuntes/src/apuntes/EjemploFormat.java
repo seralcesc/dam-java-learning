@@ -4,7 +4,6 @@
  */
 
 package apuntes;
-import java.util.Scanner;
 
 /*------------------------------- ENUNCIADO ------------------------------------
 Ejemplo de uso del método String.format()
@@ -40,8 +39,15 @@ public class EjemploFormat {
 
     public static void main(String[] args) {
         //Utilizaremos String.format() fundamentalmente para números
-        //%d - indica la parte entera de un número
-        //%f - indica la parte decimal de un número
+        // %d formatea un valor entero en base decimal; no extrae la parte entera.
+        // %f formatea un float/double completo en notación decimal.
+        // Sin precisión explícita, %f muestra seis cifras decimales.
+        // String.format() devuelve un String; no cambia el número original.
+        // ANCHO: número sin punto (%4f). Mínimo de caracteres del resultado,
+        // incluidos signo, parte entera, separador y decimales. No recorta valores.
+        // PRECISIÓN: número tras el punto (%.4f). Cifras decimales que se muestran.
+        // COMBINADOS: %12.2f reserva al menos 12 caracteres y muestra 2 decimales.
+        // El separador decimal y de miles depende de la configuración regional.
 
         int entero=14;
         double decimal=23.36;
@@ -67,7 +73,7 @@ public class EjemploFormat {
         System.out.println(String.format("%40d", entero));
 
         System.out.println("\nSeparador de miles");
-        System.out.println(String.format("%,d", 1000000)); // 1,000,000
+        System.out.println(String.format("%,d", 1000000)); // Separador según configuración regional.
 
         System.out.println("");
 
@@ -86,11 +92,21 @@ public class EjemploFormat {
         System.out.println("\nImpresión del decimal con 0 cifras decimales");
         System.out.println(String.format("%.0f", decimal));
 
-        System.out.println("\nImpresión del decimal añadiendo 4 decimales");
-        System.out.println(String.format("%4f", decimal));
+        System.out.println("\nAncho mínimo de 4 caracteres: %4f (no indica 4 decimales)");
+        System.out.println(String.format("|%4f|", decimal));
+        // 23.360000 tiene más de 4 caracteres: se muestra completo, sin recortarlo.
 
-        System.out.println("\nImpresión de PI con 6 decimales");
-        System.out.println(String.format("%6f", Math.PI));
+        System.out.println("\nPrecisión de 4 decimales: %.4f");
+        System.out.println(String.format("|%.4f|", decimal));
+
+        System.out.println("\nAncho mínimo de 12 caracteres y 2 decimales: %12.2f");
+        System.out.println(String.format("|%12.2f|", decimal));
+        // Las barras permiten ver los espacios de relleno a la izquierda.
+
+        System.out.println("\nPI con ancho mínimo de 6 caracteres: %6f");
+        System.out.println(String.format("|%6f|", Math.PI));
+        // Los seis decimales proceden de la precisión por defecto de %f,
+        // no del ancho 6. El ancho no limita la longitud máxima.
 
         System.out.println("\nImpresión de PI con 6 decimales");
         System.out.println(String.format("%.6f", Math.PI));
@@ -119,10 +135,12 @@ public class EjemploFormat {
         System.out.println(String.format("Porcentaje: %.2f%%", porcentaje * 100));
 
         System.out.println("\nMostrar un precio en Euros");
-        System.out.println(String.format("Precio: €%,.2f", precio)); // Precio: €1,234.50
+        System.out.println(String.format("Precio: €%,.2f", precio)); // Separadores según configuración regional.
 
         System.out.println("\nMezcla de espacios y números");
-        System.out.println(String.format("%-10s %8.2f", "Producto", precio)); // Producto    1234,50
+        System.out.println(String.format("%-10s %8.2f", "Producto", precio));
+        // Texto a la izquierda en un ancho mínimo de 10; número a la derecha
+        // en un ancho mínimo de 8 con 2 decimales.
 
         System.out.println("\nImpresión de una hora");
         System.out.println(String.format("La hora actual es %02d:%02d:%02d", 12, 6, 9 ));
