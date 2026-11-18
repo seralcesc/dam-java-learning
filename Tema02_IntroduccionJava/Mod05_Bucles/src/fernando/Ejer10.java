@@ -2,8 +2,6 @@ package fernando;
 
 import java.util.Scanner;
 
-
-
 // <editor-fold defaultstate="collapsed" desc="RECORDATORIOS NETBEANS / JAVA">
 /*
  * ========== RECORDATORIOS NETBEANS / JAVA ==========
@@ -54,35 +52,33 @@ import java.util.Scanner;
  * ====================================================
  */
 // </editor-fold>
-
 /**
  * ================================================
- *               PROGRAMACIÓN / JAVA
+ * PROGRAMACIÓN / JAVA
  * ================================================
  *
- * MÓDULO:     [5]
- * RELACIÓN:   [FERNANDO]
- * EJERCICIO:  [10]
- * FECHA:      [14/11/2026]
+ * MÓDULO: [5]
+ * RELACIÓN: [FERNANDO]
+ * EJERCICIO: [10]
+ * FECHA: [14/11/2026]
  *
  * ------------------------------------------------
  * ENUNCIADO
  * ------------------------------------------------
  *
- * Solicitar tres números y decir cual es el mayor
+ * Solicitar tres números y ordenarlos.
  *
  * ------------------------------------------------
  * AUTOR: Sergio Alcántara Escudero
  * ================================================
  */
-
 public class Ejer10 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int a, b, c, mayor;
-        System.out.println("Introduce tres números: ");
+        int a, b, c, menor, mayor, medio;
+        System.out.println("Introduce tres números a ordenar: ");
         System.out.println("Número 1: ");
         a = sc.nextInt();
         System.out.println("Número 2: ");
@@ -90,9 +86,13 @@ public class Ejer10 {
         System.out.println("Número 3: ");
         c = sc.nextInt();
 
+        menor = Math.min(Math.min(a, b), c);
+
         mayor = Math.max(Math.max(a, b), c);
 
-        System.out.println("El mayor es " + mayor);
+        medio = (a + b + c) - menor - mayor;
+
+        System.out.println(String.format("%d, %d, %d", menor, medio, mayor));
 
     } // main
 

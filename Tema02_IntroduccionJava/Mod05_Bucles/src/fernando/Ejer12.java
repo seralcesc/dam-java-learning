@@ -1,5 +1,7 @@
 package fernando;
 
+import java.util.Scanner;
+
 
 
 // <editor-fold defaultstate="collapsed" desc="RECORDATORIOS NETBEANS / JAVA">
@@ -58,16 +60,16 @@ package fernando;
  *               PROGRAMACIÓN / JAVA
  * ================================================
  *
- * MÓDULO:     [X]
- * RELACIÓN:   [X]
- * EJERCICIO: [XX]
- * FECHA:     14/11/2026
+ * MÓDULO:     [5]
+ * RELACIÓN:   [FERNANDO]
+ * EJERCICIO:  [12]
+ * FECHA:      14/11/2026
  *
  * ------------------------------------------------
  * ENUNCIADO
  * ------------------------------------------------
  *
- * [Escribir aquí el enunciado del ejercicio]
+ * Pedir un número mayor o igual que cero y decir cuántas cifras tiene
  *
  * ------------------------------------------------
  * AUTOR: Sergio Alcántara Escudero
@@ -77,7 +79,23 @@ package fernando;
 public class Ejer12 {
 
     public static void main(String[] args) {
-        
+        Scanner sc = new Scanner(System.in);
+
+        int numero;
+        long longitud;
+        String cifra;
+
+        System.out.println("Escribe un número (>=0) para saber cuantas cifras tiene: ");
+        numero = sc.nextInt();
+
+        if (numero < 0) {
+            System.out.println("Número introducido incorrecto.");
+        } else {
+            cifra = String.valueOf(numero);
+            longitud = cifra.length();
+            System.out.println(String.format("El número %d tiene %d cifras.", numero, longitud));
+        }
+
     } // main
 
 } // class

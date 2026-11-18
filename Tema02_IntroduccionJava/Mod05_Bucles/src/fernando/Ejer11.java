@@ -69,7 +69,7 @@ import java.util.Scanner;
  * ENUNCIADO
  * ------------------------------------------------
  *
- * Pedir un número y decir cuántas cifras tiene.
+ * Pedir un número entre 0 y 9999 y decir cuántas cifras tiene.
  *
  * ------------------------------------------------
  * AUTOR: Sergio Alcántara Escudero
@@ -81,23 +81,18 @@ public class Ejer11 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int numero, numeroPositivo, longitud;
+        int longitud, numero;
         String numeroString;
 
-        System.out.println("Introduce un número: ");
+        System.out.println("Introduce un número (0 - 9999): ");
         numero = sc.nextInt();
 
-        if (numero < 0) {
-            numeroPositivo = Math.abs(numero);
-            numeroString = String.valueOf(numeroPositivo);
+        if (numero < 0 || numero > 9999) {
+            System.out.println("El número introducido es erróneo.");
         } else {
             numeroString = String.valueOf(numero);
+            longitud = numeroString.length();
+            System.out.printf("El número %d tiene %d cifras.", numero, longitud);
         }
-
-        longitud = numeroString.length();
-
-        System.out.printf("El número %d tiene %d cifras.", numero, longitud);
-
     } // main
-
 } // class

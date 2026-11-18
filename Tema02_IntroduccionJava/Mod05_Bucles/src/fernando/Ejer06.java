@@ -60,7 +60,12 @@ import java.util.Scanner;
  * EJERCICIO: [06]
  *
  * ENUNCIADO:
- * [Escribir aquí el enunciado del ejercicio]
+ * La calculadora de un círculo. En un menú un usuario debe decidir si quiere
+ * calcular el perímetro o el área de una circunferencia. Después le pediremos el radio de la
+ * circunferencia y le daremos el resultado con 4 decimales.
+ * Debemos tener en cuenta que se puede confundir el usuario a la hora de introducir los
+ * datos Si el radio es negativo mostrar que es imposible la opción, igual si teclea un número
+ * distinto al de menú.
  *
  * AUTOR: Sergio Alcántara Escudero
  * =========================================
