@@ -55,73 +55,67 @@ import java.util.Scanner;
 /**
  * ========== PROGRAMACIÓN / JAVA ==========
  *
- * MÓDULO: [5]
- * RELACIÓN: [FERNANDO]
- * EJERCICIO: [06]
+ * MÓDULO: [5] RELACIÓN: [FERNANDO] EJERCICIO: [06]
  *
- * ENUNCIADO:
- * La calculadora de un círculo. En un menú un usuario debe decidir si quiere
- * calcular el perímetro o el área de una circunferencia. Después le pediremos el radio de la
- * circunferencia y le daremos el resultado con 4 decimales.
- * Debemos tener en cuenta que se puede confundir el usuario a la hora de introducir los
- * datos Si el radio es negativo mostrar que es imposible la opción, igual si teclea un número
- * distinto al de menú.
+ * ENUNCIADO: La calculadora de un círculo. En un menú un usuario debe decidir
+ * si quiere calcular el perímetro o el área de una circunferencia. Después le
+ * pediremos el radio de la circunferencia y le daremos el resultado con 4
+ * decimales. Debemos tener en cuenta que se puede confundir el usuario a la
+ * hora de introducir los datos Si el radio es negativo mostrar que es imposible
+ * la opción, igual si teclea un número distinto al de menú.
  *
- * AUTOR: Sergio Alcántara Escudero
- * =========================================
+ * AUTOR: Sergio Alcántara Escudero =========================================
  */
 public class Ejer06 {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int opcion;
-        double radio, area, longitud;
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int opcion;
+		double radio, area, longitud;
 
-        System.out.println("Introduce el valor del radio: ");
-        radio = sc.nextDouble();
+		do {
+			System.out.println("### MENÚ ###\n" + "Elige una acción a realizar: ");
+			System.out.println(
+					"· 1. Calcular el área del círculo.\n" + "· 2. Calcular la longitud de la circunferencia.\n"
+							+ "· 3. Calcular área y longitud de la circunferencia.\n" + "· 0. Salir");
 
-        if (radio <= 0) {
-            System.out.println("El radio debe ser mayor de 0.");
+			opcion = sc.nextInt();
 
-        } else {
-            area = Math.PI * Math.pow(radio, 2);
-            longitud = 2 * Math.PI * radio;
+			System.out.println("Introduce el valor del radio: ");
+			radio = sc.nextDouble();
 
-            do {
-                System.out.println("### MENÚ ###\n"
-                        + "Elige una acción a realizar: ");
-                System.out.println("· 1. Calcular el área del círculo.\n"
-                        + "· 2. Calcular la longitud de la circunferencia.\n"
-                        + "· 3. Calcular área y longitud de la circunferencia.\n"
-                        + "· 0. Salir");
+			if (radio <= 0) {
+				System.out.println("El radio debe ser mayor de 0.");
 
-                opcion = sc.nextInt();
+			} else {
+				area = Math.PI * Math.pow(radio, 2);
+				longitud = 2 * Math.PI * radio;
 
-                switch (opcion) {
-                    case 1:
-                        System.out.println(String.format("Área = %.4f", area));
-                        System.out.println();
-                        break;
-                    case 2:
-                        System.out.println(String.format("Longitud = %.4f", longitud));
-                        System.out.println();
-                        break;
-                    case 3:
-                        System.out.println(String.format("Área = %.4f", area));
-                        System.out.println(String.format("Longitud = %.4f", longitud));
-                        System.out.println();
-                        break;
-                    case 0:
-                        System.out.println("¡Que tenga un buen día!");
-                        break;
-                    default:
-                        System.out.println("Opción incorrecta.");
-                        System.out.println();
-                }
-            } while (opcion != 0);
-            System.out.println("Fin del programa");
-        }
+				switch (opcion) {
+				case 1:
+					System.out.println(String.format("Área = %.4f", area));
+					System.out.println();
+					break;
+				case 2:
+					System.out.println(String.format("Longitud = %.4f", longitud));
+					System.out.println();
+					break;
+				case 3:
+					System.out.println(String.format("Área = %.4f", area));
+					System.out.println(String.format("Longitud = %.4f", longitud));
+					System.out.println();
+					break;
+				case 0:
+					System.out.println("¡Que tenga un buen día!");
+					break;
+				default:
+					System.out.println("Opción incorrecta.");
+					System.out.println();
+				}
+			}
+		} while (opcion != 0);
+		System.out.println("Fin del programa");
 
-    } // main
+	} // main
 
 } // class

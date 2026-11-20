@@ -81,7 +81,7 @@ public class Ejer05 {
         a = sc.nextDouble();
         System.out.println("Introduce el valor de B: ");
         b = sc.nextDouble();
-        System.out.println("Introduce el valor de A: ");
+        System.out.println("Introduce el valor de C: ");
         c = sc.nextDouble();
 
         if (a == 0) {
