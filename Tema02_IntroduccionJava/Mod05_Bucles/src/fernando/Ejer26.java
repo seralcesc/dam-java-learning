@@ -62,8 +62,8 @@ import java.util.Scanner;
  *
  * MÓDULO:    [5]
  * RELACIÓN:  [FERNANDO]
- * EJERCICIO:  [26
- * FECHA:       20/11/2026
+ * EJERCICIO: [26
+ * FECHA:     20/11/2026
  *
  * ------------------------------------------------
  * ENUNCIADO
@@ -82,31 +82,52 @@ public class Ejer26 {
 
         Scanner sc = new Scanner(System.in);
         final int TOTAL_ALUMNOS = 5;
+        final int EDAD_LIMITE = 18;
         final double ALTURA_LIMITE = 1.75;
-        int edad, mayorEdad, masAltos;
+        int edad, contEdad, contAltura;
         double altura, mediaEdad, mediaAltura;
 
-        mayorEdad = 0;
+        contEdad = 0;
+        contAltura = 0;
+        mediaEdad = 0;
+        mediaAltura = 0;
 
-        System.out.println("=== ESTADÍSTICAS DE ALMUNOS ===");
+        System.out.println("=== CARGA DE DATOS ===");
 
         for (int i = 1; i <= TOTAL_ALUMNOS; i++) {
             do {
-                System.out.println(String.format("Introduce edad de alumno %d/%d: ", i, TOTAL_ALUMNOS ));
+                System.out.println(String.format("Introduce la edad del "
+                        + "alumno %d/%d: ", i, TOTAL_ALUMNOS ));
                 edad = sc.nextInt();
-            } while (edad < 0);
-            if (edad >= 18) {
-                mayorEdad ++;
+            } while (edad < 1);
+            mediaEdad += edad;
+            if (edad > EDAD_LIMITE) {
+                contEdad ++;
             }
 
             do {
-                System.out.println(String.format("Introduce altura ( > 0 cm.) de alumno  %d/%d: ", i, TOTAL_ALUMNOS ));
+                System.out.println(String.format("Introduce la altura "
+                        + "(en metros, separador:\",\") del alumno  %d/%d: ", i, TOTAL_ALUMNOS ));
                 altura = sc.nextDouble();
-            } while (edad < 0);
-
-
+            } while (altura < 0.01);
+            mediaAltura += altura;
+            if (altura > ALTURA_LIMITE) {
+                contAltura ++;
+            }
 
         }
+
+        mediaEdad = mediaEdad / TOTAL_ALUMNOS;
+        mediaAltura = mediaAltura / TOTAL_ALUMNOS;
+
+        System.out.println("=== ESTADÍSTICAS DE ALMUNOS ===");
+        System.out.println("Total alumnos: " + TOTAL_ALUMNOS);
+        System.out.println(String.format("· Edad media de alumnos: %.2f.", mediaEdad));
+        System.out.println(String.format("· Altura media de alumnos: %.2f.", mediaAltura));
+        System.out.println(String.format("· Alumnos mayores de %d años: %d", EDAD_LIMITE,contEdad));
+        System.out.println(String.format("· Alumnos que superan %.2f m.: %d", ALTURA_LIMITE, contAltura));
+
+
 
     } // main
 

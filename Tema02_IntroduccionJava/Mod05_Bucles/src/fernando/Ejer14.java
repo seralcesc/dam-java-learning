@@ -97,8 +97,9 @@ public class Ejer14 {
 
             for (int i = cifra.length()-1; i >= 0; i--) {
                 invertida += cifra.charAt(i);
-                numero2 = Integer.parseInt(invertida);
             }
+            
+            numero2 = Integer.parseInt(invertida);
 
             if (numero1 == numero2) {
                 System.out.println(String.format("El número %d es capicúa.", numero1));
