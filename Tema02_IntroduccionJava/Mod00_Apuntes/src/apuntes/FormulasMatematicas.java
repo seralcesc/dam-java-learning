@@ -172,6 +172,23 @@ import java.util.Scanner;
  * V = (Área base·h)/3
  * areaBase * h / 3.0
  *
+ * ================================================
+ *
+ * AREA DE FIGURAS PLANAS:
+ *
+ * ================================================
+ * Lo que pide el ejercicio                         Fórmula
+ * Importe descontado                               precio * porcentaje / 100
+ * Precio con descuento                             precio * (1 - porcentaje / 100)
+ * Porcentaje descontado                            (original - final) * 100 / original
+ * Precio original antes del descuento              final / (1 - porcentaje / 100)
+ * Importe de una subida                            valor * porcentaje / 100
+ * Precio con aumento                               valor * (1 + porcentaje / 100)
+ * Dos descuentos seguidos                          precio * (1 - p1/100) * (1 - p2/100)
+ * Añadir IVA                                       precio * (1 + iva/100)
+ * Quitar IVA                                       precioConIVA / (1 + iva/100)
+ * Porcentaje de una cantidad respecto de otra      parte * 100.0 / total
+ *
  * ------------------------------------------------
  * AUTOR: Sergio Alcántara Escudero
  * ================================================
