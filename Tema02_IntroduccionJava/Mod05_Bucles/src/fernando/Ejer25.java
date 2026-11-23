@@ -81,7 +81,7 @@ public class Ejer25 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-
+        
         final int TOTAL_SUELDOS = 10;
 
         int mayorMil;
@@ -97,14 +97,12 @@ public class Ejer25 {
             sueldo = sc.nextDouble();
             if (sueldo < 0) {
                 sueldo = 0;
-                System.out.println("El sueldo no puede ser inferior a 0€. Se ha introducido 0 por defecto.");
+                System.out.println("El sueldo no puede ser inferior a 0. Se ha introducido 0€ por defecto.");
             } else {
                 totalSueldos += sueldo;
                 if (sueldo > 1000) {
                     mayorMil ++;
-            }
-
-
+                }
             }
         }
 

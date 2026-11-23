@@ -117,7 +117,7 @@ public class Ejer26 {
 
         }
 
-        mediaEdad = mediaEdad / TOTAL_ALUMNOS;
+        mediaEdad = (double) mediaEdad / TOTAL_ALUMNOS;
         mediaAltura = mediaAltura / TOTAL_ALUMNOS;
 
         System.out.println("=== ESTADÍSTICAS DE ALMUNOS ===");
