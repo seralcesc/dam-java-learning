@@ -98,7 +98,7 @@ import java.util.Scanner;
  * 4. TEOREMA DE PITÁGORAS / HIPOTENUSA
  *
  * ================================================
- * Fórmula:  c² = a² + b²  ⇒  c = √(a² + b²)
+ * Fórmula:  a² = b² + c²  ⇒  c² = a² + b²  ⇒  c = √(a² + b²)
  *
  * Java:  double c = Math.sqrt(a * a + b * b);
  *

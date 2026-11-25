@@ -1,3 +1,5 @@
+package apuntes;
+
 import java.util.Scanner;
 
 /**
