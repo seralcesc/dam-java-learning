@@ -49,21 +49,20 @@ import java.util.Scanner;
  * ====================================================
  */
 // </editor-fold>
-
 /**
  * ========== PROGRAMACIÓN / JAVA ==========
  *
- * MÓDULO:    [5]
- * RELACIÓN:  [FERNANDO2]
+ * MÓDULO: [5]
+ * RELACIÓN: [FERNANDO2]
  * EJERCICIO: [02]
  *
  * ENUNCIADO:
  * Escribe un programa en Java que solicite al usuario el número de filas (alto de
- * la caja),el número de columnas (ancho de la caja). y el carácter con el que desea 
+ * la caja),el número de columnas (ancho de la caja). y el carácter con el que desea
  * dibujarla. Solo veremos el borde: (ejemplo de 3 filas y 5 columnas)
- * 
+ *
  * 		********
- * 		*      *
+ * 		* *
  * 		********
  *
  * AUTOR: Sergio Alcántara Escudero
@@ -72,33 +71,33 @@ import java.util.Scanner;
  */
 public class Ejer02 {
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		
-Scanner sc = new Scanner(System.in);
-		
-		int filas, columnas;
-		String simbolo;
-		
-		System.out.println("Introduce cuántas filas quieres:");
-		filas = sc.nextInt();
-		System.out.println("Introduce cuántas columnas quieres:");
-		columnas = sc.nextInt();
-		
-		System.out.println("¿Qué símbolo quieres utilizar?");
-		simbolo = sc.next();
-		
-		for (int i = 1; i <= filas; i++) {
-			for (int j = 1; j <= columnas; j++) {
-				if (i == 1 || i == filas || j == 1 || j == columnas) {
-					System.out.print(simbolo + " ");
-				}; // if
-			} //for j
-		System.out.println();
-		} //for i
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
 
-	}
+        Scanner sc = new Scanner(System.in);
+
+        int filas, columnas;
+        String simbolo;
+
+        System.out.println("Introduce cuántas filas quieres:");
+        filas = sc.nextInt();
+        System.out.println("Introduce cuántas columnas quieres:");
+        columnas = sc.nextInt();
+
+        System.out.println("¿Qué símbolo quieres utilizar?");
+        simbolo = sc.next();
+
+        for (int i = 1; i <= filas; i++) {
+            for (int j = 1; j <= columnas; j++) {
+                if (i == 1 || i == filas || j == 1 || j == columnas) {
+                    System.out.print(simbolo + " ");
+                } // if
+            } //for j
+            System.out.println();
+        } //for i
+
+    }
 
 }
